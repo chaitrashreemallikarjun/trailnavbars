@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <style>
+  .bg-1{
+	background-color:#002b80;
+}
+ 
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+ * {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  
+ 
+  background-image:url(job.jpg);
+  min-height:500px;
+
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+.container {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+  background-color: white;
+}
+.bottom-left{
+ position:absolute;
+ bottom:8px;
+ left:16px;
+ color:#ffffff;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #ff4d4d;
+  color:#ffffff;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.btn:hover {
+  opacity: 1;
+}
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color:#002b80;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 40%;
+}
+
+.tablink:hover {
+  background-color:#002b80;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  background-color:#000033;
+  display: none;
+  padding: 100px 20px;
+  height: 50%;
+}
+
+a.btn{
+	margin: 30px 10px;
+	width:150px;
+	padding:10px;
+	border-radius:20px;
+}
+a.btn-first{
+	background-color:#002b80;
+	color:white;
+}
+a.btn-second{
+	background-color:#ff4d4d;
+	border:1px;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+   
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">I am looking for job</a></li>
+      <li><a href="#">I am looking for hire</a></li>
+    </ul>
+  </div>
+  <div class="container-fluid bg-1">
+    <div class="navbar-header">
+      <h4><a class="navbar-brand" href="#">Employe.im</a></h4>
+    </div>
+    
+    <ul class="nav navbar-nav navbar-right">
+  
+<button class="tablink" onclick="openPage('findajob', this, '#002b80')">find a job</button>
+<button class="tablink" onclick="openPage('candidates', this, '#002b80')">candidates</button>
+<button class="tablink" onclick="openPage('employer', this, '#002b80')">employer</button>
+    </ul>
+  </div>
+<div id="findajob" class="tabcontent">
+  <h3>find a job</h3>
+  <p>If you're just thinking about freelance writing, bookmark this post and come back to it when you're ready to take action.</p> 
+</div>
+
+<div id="candidates" class="tabcontent">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-5">
+      <h3>candidates</h3>
+      <p>start applying instantly</p>
+    </div>
+    <div class="col-sm-3">
+      <h3>get started</h3>
+      <p>job search</p>
+      <p>company search</p>
+      <p>create your cv</p>
+      <p>how it works<p>
+    </div>
+    <div class="col-sm-4">
+      <h3>find a job today</h3>        
+      <a class="btn btn-first" href="#">log in</a><br>
+	<a class="btn btn-second" href="#">register</a>
+    </div>
+</div>
+</div>
+</div>
+
+<div id="employer" class="tabcontent">
+  <h3>employer</h3>
+  <p></p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+//document.getElementById("defaultOpen").click();
+</script>
+   
+<div class="bg-img">
+  <div class="bottom-left"><h2>find the career you deserve.</h2>
+  <p>your isle of man job search starts and ends with employ</p></div>
+  <form action="/action_page.php" class="container">
+    <h1>Login</h1>
+
+    <label for="email"></label>
+    <input type="text" placeholder="keywords" name="email" required>
+
+    <label for="psw"></label>
+    <input type="password" placeholder="company" name="psw" required>
+
+    <label for="psw"></label>
+    <input type="password" placeholder="job type" name="psw" required>
+    <button type="button" class="btn btn-link">find a job now</button>
+  </form>
+</nav>
+</div>
+</body>
+</html>
